@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>首页</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../layuiadmin/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../layuiadmin/style/admin.css" media="all">
+</head>
+<body class="layui-layout-body">
+
+<div id="LAY_app">
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <!-- 头部区域 -->
+            <ul class="layui-nav layui-layout-left">
+                <li class="layui-nav-item layadmin-flexible" lay-unselect>
+                    <a href="javascript:;" layadmin-event="flexible" title="侧边伸缩">
+                        <i class="layui-icon layui-icon-shrink-right" id="LAY_app_flexible"></i>
+                    </a>
+                </li>
+
+            </ul>
+            <ul class="layui-nav layui-layout-right" lay-filter="layadmin-layout-right">
+                <li class="layui-nav-item layui-hide-xs" lay-unselect="">
+                    <a href="javascript:;" layadmin-event="theme">
+                        <i class="layui-icon layui-icon-theme"></i>
+                    </a>
+                </li>
+                <li class="layui-nav-item" lay-unselect>
+                    <a href="javascript:;">
+                        <cite>贤心</cite>
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd layadmin-event="logout" style="text-align: center;"><a>退出</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item layui-hide-xs" lay-unselect>
+                    <a><i class="layui-icon layui-icon-more-vertical"></i></a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 侧边菜单 -->
+        <div class="layui-side layui-side-menu">
+            <div class="layui-side-scroll">
+                <div class="layui-logo" lay-href="home/console.html">
+                    <span>店分销</span>
+                </div>
+                <ul class="layui-nav layui-nav-tree" lay-shrink="all" id="LAY-system-side-menu"
+                    lay-filter="layadmin-system-side-menu">
+                    <li data-name="home" class="layui-nav-item">
+                        <a href="javascript:;" lay-tips="主页" lay-direction="2">
+                            <i class="layui-icon layui-icon-home"></i>
+                            <cite>主页</cite>
+                        </a>
+                    </li>
+                    <li data-name="component" class="layui-nav-item">
+                        <a href="javascript:;" lay-tips="授权管理" lay-direction="2">
+                            <i class="layui-icon layui-icon-friends"></i>
+                            <cite>授权管理</cite>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd><a lay-href="component/button/index.html">添加店铺</a></dd>
+                            <dd><a lay-href="component/button/index.html">绑定厂家</a></dd>
+                            <dd><a lay-href="component/button/index.html">绑定商家</a></dd>
+                            <dd><a lay-href="component/button/index.html">分销设置</a></dd>
+                        </dl>
+                    </li>
+                    <li data-name="template" class="layui-nav-item">
+                        <a href="javascript:;" lay-tips="订单管理" lay-direction="2">
+                            <i class="layui-icon layui-icon-form"></i>
+                            <cite>订单管理</cite>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd><a lay-href="template/personalpage.html">所有订单</a></dd>
+                            <dd><a lay-href="template/addresslist.html">打单发货</a></dd>
+                            <dd><a lay-href="template/goodslist.html">底单查询</a></dd>
+                            <dd><a lay-href="template/msgboard.html">打印记录</a></dd>
+                            <dd><a lay-href="template/search.html">发货记录</a></dd>
+                            <dd><a href="user/reg.html" target="_blank">快递对账</a></dd>
+                            <dd><a href="user/login.html" target="_blank">线下单</a></dd>
+                            <dd><a href="user/forget.html" target="_blank">备货单</a></dd>
+                            <dd><a lay-href="template/tips/404.html">打单设置</a></dd>
+                        </dl>
+                    </li>
+                    <li data-name="app" class="layui-nav-item">
+                        <a href="javascript:;" lay-tips="财务结算" lay-direction="2">
+                            <i class="layui-icon layui-icon-rmb"></i>
+                            <cite>财务结算</cite>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd><a lay-href="app/message/index.html">对账设置</a></dd>
+                            <dd><a lay-href="app/workorder/list.html">对账中心</a></dd>
+                            <dd><a lay-href="app/workorder/list.html">厂家底单</a></dd>
+                            <dd><a lay-href="app/workorder/list.html">已发货明细</a></dd>
+                            <dd><a lay-href="app/workorder/list.html">代发售后</a></dd>
+                        </dl>
+                    </li>
+                    <li data-name="senior" class="layui-nav-item">
+                        <a href="javascript:;" lay-tips="商品管理" lay-direction="2">
+                            <i class="layui-icon layui-icon-component"></i>
+                            <cite>商品管理</cite>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd><a lay-href="app/workorder/list.html">商品列表</a></dd>
+                            <dd><a lay-href="app/workorder/list.html">自营商品</a></dd>
+                            <dd><a lay-href="app/workorder/list.html">代发商品</a></dd>
+                        </dl>
+                    </li>
+
+                    <li data-name="set" class="layui-nav-item">
+                        <a href="javascript:;" lay-tips="设置" lay-direction="2">
+                            <i class="layui-icon layui-icon-set"></i>
+                            <cite>系统设置</cite>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd><a lay-href="app/workorder/list.html">账户管理</a></dd>
+                        </dl>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <!-- 页面标签 -->
+        <div class="layadmin-pagetabs" id="LAY_app_tabs">
+            <div class="layui-icon layadmin-tabs-control layui-icon-prev" layadmin-event="leftPage"></div>
+            <div class="layui-icon layadmin-tabs-control layui-icon-next" layadmin-event="rightPage"></div>
+            <div class="layui-icon layadmin-tabs-control layui-icon-down">
+                <ul class="layui-nav layadmin-tabs-select" lay-filter="layadmin-pagetabs-nav">
+                    <li class="layui-nav-item" lay-unselect>
+                        <a href="javascript:;"></a>
+                        <dl class="layui-nav-child layui-anim-fadein">
+                            <dd layadmin-event="closeThisTabs"><a href="javascript:;">关闭当前标签页</a></dd>
+                            <dd layadmin-event="closeOtherTabs"><a href="javascript:;">关闭其它标签页</a></dd>
+                            <dd layadmin-event="closeAllTabs"><a href="javascript:;">关闭全部标签页</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <div class="layui-tab" lay-unauto lay-allowClose="true" lay-filter="layadmin-layout-tabs">
+                <ul class="layui-tab-title" id="LAY_app_tabsheader">
+                    <li lay-id="home/console.html" lay-attr="home/console.html" class="layui-this"><i
+                            class="layui-icon layui-icon-home"></i></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- 主体内容 -->
+        <div class="layui-body" id="LAY_app_body">
+            <div class="layadmin-tabsbody-item layui-show">
+                
+            </div>
+        </div>
+
+        <!-- 辅助元素，一般用于移动设备下遮罩 -->
+        <div class="layadmin-body-shade" layadmin-event="shade"></div>
+    </div>
+</div>
+
+<script src="../layuiadmin/layui/layui.js"></script>
+<script>
+    layui.config({
+        base: '../layuiadmin/' //静态资源所在路径
+    }).extend({
+        index: 'lib/index' //主入口模块
+    }).use('index');
+</script>
+</body>
+</html>
+
+
